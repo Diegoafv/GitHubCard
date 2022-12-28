@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GitHub Profile Card</title>
+  </head>
+  <body>
+    <section class="main">
+      <div class="main-container">
+        <div class="card-side">
+          <p>Share your #githubcard</p>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="/assets/logo-github.svg" alt="logo" class="logo" />
+                </div>
+                <span id="username">@username</span>
+              </div>
+              <div class="card-body">
+                <div class="info">
+                  <ul class="info-list">
+                    <li class="info-item">
+                      <img
+                        src="/assets/followers.svg"
+                        class="info-icon"
+                        alt="followers"
+                      />
+                      <span id="followers">0</span
+                      ><span class="info-label"> Followers</span>
+                    </li>
+                    <li class="info-item">
+                      <img
+                        src="/assets/following.svg"
+                        class="info-icon"
+                        alt="following"
+                      />
+                      <span id="following">0</span
+                      ><span class="info-label"> Following</span>
+                    </li>
+                    <li class="info-item">
+                      <img
+                        src="/assets/repository.svg"
+                        class="info-icon"
+                        alt="repositories"
+                      />
+                      <span id="repos">0</span
+                      ><span class="info-label"> Repositories</span>
+                    </li>
+                    <li class="info-item">
+                      <img
+                        src="/assets/company.svg"
+                        class="info-icon"
+                        alt="company"
+                      />
+                      <span class="info-label" id="company">@company</span>
+                    </li>
+                    <li class="info-item">
+                      <img
+                        src="/assets/location.svg"
+                        class="info-icon"
+                        alt="location"
+                      />
+                      <span class="info-label" id="location">Location</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="avatar-container">
+                  <img
+                    src="http://github.com/diegoafv.png"
+                    alt="avatar"
+                    class="avatar"
+                    id="avatar"
+                  />
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="logo-footer-container">
+                  <img src="/assets/logo-github.svg" alt="logo" class="logo" />
+                </div>
+                <span class="footer-label">GITHUBCARD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="options-side">
+          <h3 class="option-label">Customize GitHub Card</h3>
+          <button class="option-btn" id="btn-generate-bg">
+            Generate background
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
