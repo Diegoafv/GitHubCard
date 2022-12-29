@@ -10,8 +10,30 @@
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>GitHub Profile Card</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript">
+      function downloadimage() {
+        const cardContainer =
+          document.querySelector(".card-container");
+        html2canvas(cardContainer, {
+          scale: 3,
+          logging: true,
+          letterRendering: 1,
+          allowTaint: true,
+          useCORS: true,
+        }).then((canvas) => {
+          const pngImage = canvas.toDataURL("image/png");
+          const downloadLink = document.createElement("a");
+          downloadLink.href = pngImage;
+          downloadLink.download = "githubcard.png";
+          //downloadLink.innerHTML = "Download Image";
+          downloadLink.click();
+        });
+      }
+    </script>
   </head>
   <body>
     <section class="main">
@@ -75,12 +97,7 @@
                   </ul>
                 </div>
                 <div class="avatar-container">
-                  <img
-                    src="http://github.com/diegoafv.png"
-                    alt="avatar"
-                    class="avatar"
-                    id="avatar"
-                  />
+                  <img src="#" alt="avatar" class="avatar" id="avatar" />
                 </div>
               </div>
               <div class="card-footer">
@@ -93,13 +110,31 @@
           </div>
         </div>
         <div class="options-side">
-          <h3 class="option-label">Customize GitHub Card</h3>
-          <button class="option-btn" id="btn-generate-bg">
-            Generate background
-          </button>
+          <div class="search-user-container">
+            <h3 class="option-label">Search GitHub User</h3>
+            <input
+              type="text"
+              class="search-user-input"
+              placeholder="Enter username"
+              id="search-user-input"
+            />
+            <button class="option-btn" id="btn-search-user">Search</button>
+          </div>
+          <div class="customize-container">
+            <h3 class="option-label">Customize GitHub Card</h3>
+            <button class="option-btn" id="btn-generate-bg">
+              Generate background
+            </button>
+          </div>
+          <div class="download-container">
+            <h3 class="option-label">Download Card</h3>
+            <button onclick="downloadimage()" class="download-btn">
+              Generate your #githubcard
+            </button>
+          </div>
         </div>
       </div>
     </section>
   </body>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </html>
